@@ -1,0 +1,47 @@
+.home-image{
+    width: 100%;
+    background: linear-gradient(to left, rgba(85, 84, 84, 0.023), rgba(0, 0, 0, 0.293)), url("../Assets/homeimg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.home-image .banner{
+    background: #000000;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-image .banner h1{
+    color: #fff;
+    text-transform: uppercase;
+}
+.category-tile{
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    padding-left: 20px!important;
+    padding-right: 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 30px;
+}
+.category-tile:hover{
+    transform: scale(1.05);
+}
+.sale_banner--container img{
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto;
+}
