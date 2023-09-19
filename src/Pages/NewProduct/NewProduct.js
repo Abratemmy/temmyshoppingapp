@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './NewProduct.css'
 import { useNavigate } from 'react-router-dom';
 import { useCreateProductMutation } from '../../services/appApi';
-import { Alert, Button, ButtonGroup, Col, Container, Form, Row, } from "react-bootstrap"
+import { Alert, Button, Col, Container, Form, Row, } from "react-bootstrap"
 import axios from '../../axios';
 
 function NewProduct() {
