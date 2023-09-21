@@ -18,7 +18,8 @@ function Home() {
 
     useEffect(() => {
         axios.get('/products').then(({ data }) => dispatch(updateProducts(data)))
-    }, [])
+    }, []);
+
     return (
         <div>
             <div className='home-image'>

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useCreateProductMutation } from '../../services/appApi';
 import { Alert, Button, Col, Container, Form, Row, } from "react-bootstrap"
 import axios from '../../axios';
+import categories from '../../categories';
 
 function NewProduct() {
     const [name, setName] = useState("")
@@ -91,15 +92,11 @@ function NewProduct() {
                                 <option disabled selected>
                                     --Select One ---
                                 </option>
-                                <option value="technology">
-                                    technology
-                                </option>
-                                <option value="phone">
-                                    Phone
-                                </option>
-                                <option value="cloth">
-                                    Cloth
-                                </option>
+                                {categories.map((category, index) => {
+                                    return (
+                                        <option value={category.name.toLocaleLowerCase()} key={index} style={{ textTransform: 'capitalize' }}>{category.name}</option>
+                                    )
+                                })}
                             </Form.Select>
                         </Form.Group>
 

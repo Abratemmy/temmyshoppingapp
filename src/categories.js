@@ -1,17 +1,18 @@
-import category1 from './Assets/category1.jpg';
-import category2 from './Assets/category2.jpg'
+import category1 from './Assets/category2.jpg';
+import category2 from './Assets/fashionnova4.jpeg'
+import category3 from './Assets/Bestie.jpeg';
 const categories = [
     {
         name: "Technology",
         img: category1
     },
     {
-        name: "Phone",
+        name: "Cloth",
         img: category2
     },
     {
-        name: "Laptops",
-        img: category2
+        name: "Shoes",
+        img: category3
     },
 ]
 

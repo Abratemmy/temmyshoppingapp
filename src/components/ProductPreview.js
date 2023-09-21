@@ -10,8 +10,8 @@ function ProductPreview({ _id, category, name, pictures }) {
                     style={{ height: '200px', objectFit: 'cover' }}
                 />
                 <Card.Body>
-                    <Card.Title>{name}</Card.Title>
-                    <Badge bg="warning" text="dark">
+                    <Card.Title style={{ textTransform: 'capitalize' }}>{name}</Card.Title>
+                    <Badge bg="warning" text="dark" style={{ textTransform: 'capitalize' }}>
                         {category}
                     </Badge>
                 </Card.Body>

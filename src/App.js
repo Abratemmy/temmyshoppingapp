@@ -8,6 +8,7 @@ import Signup from './Pages/Auth/SignUp';
 import { useSelector } from 'react-redux';
 import NewProduct from './Pages/NewProduct/NewProduct';
 import ProductDetail from './Pages/ProductPage/ProductDetail';
+import CategoryPage from './Pages/CategoryPage/CategoryPage';
 
 function App() {
   const user = useSelector((state) => state.user);
@@ -23,6 +24,7 @@ function App() {
           </>}
           <Route path='/new_product' element={<NewProduct />} />
           <Route path='/product/:id' element={<ProductDetail />} />
+          <Route path='/category/:category' element={<CategoryPage />} />
           <Route path="*" element={<Home />} />
 
         </Routes>
