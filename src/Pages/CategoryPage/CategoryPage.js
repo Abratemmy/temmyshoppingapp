@@ -30,13 +30,9 @@ function CategoryPage() {
         <Loading />;
     }
 
-    if (loading) {
-        <Loading />
-    }
-
     console.log('PRODUCTCATEGORY', products)
     const productsCategory = products.filter((product) => product.name.toLowerCase().includes(searchTerm.toLowerCase()));
-    // const productsCategory = products?.filter((product) => product.name.toLowerCase().includes(searchTerm.toLowerCase()))
+
     return (
         <div className='category-page-container'>
             <div className={`pt-3 ${category}-banner-container category-banner-container`}>
