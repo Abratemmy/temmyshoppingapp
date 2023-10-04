@@ -11,6 +11,7 @@ import ProductDetail from './Pages/ProductPage/ProductDetail';
 import CategoryPage from './Pages/CategoryPage/CategoryPage';
 import ScrollToTop from './components/ScrollToTop';
 import CartPage from './Pages/CartPage/CartPage';
+import OrderPage from './Pages/Orders/OrderPage';
 
 function App() {
   const user = useSelector((state) => state.user);
@@ -29,6 +30,7 @@ function App() {
           {user && (
             <>
               <Route path="/cart" element={<CartPage />} />
+              <Route path="/orders" element={<OrderPage />} />
             </>
           )}
           <Route path='/new_product' element={<NewProduct />} />

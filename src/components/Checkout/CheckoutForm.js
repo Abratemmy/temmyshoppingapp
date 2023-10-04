@@ -11,7 +11,7 @@ function CheckoutForm() {
     const user = useSelector(state => state.user);
     const navigate = useNavigate();
     const [alertMessage, setAlertMessage] = useState("");
-    const [createOrder, { isLoading, isError }] = useCreateOrderMutation();
+    const [createOrder, { isLoading, isError, isSuccess }] = useCreateOrderMutation();
     const [address, setAddress] = useState("");
     const [country, setCountry] = useState("");
     const [paying, setPaying] = useState(false);
@@ -40,7 +40,7 @@ function CheckoutForm() {
                 if (!isLoading && !isError) {
                     setAlertMessage(`Payment ${paymentIntent.status}`);
                     setTimeout(() => {
-                        // navigate("/orders");
+                        navigate("/orders");
                     }, 3000);
                 }
             });
@@ -88,7 +88,7 @@ function CheckoutForm() {
 
                     <label htmlFor='card-element'>Card</label>
                     <CardElement id="card-element" />
-                    <Button className="mt-3" type="submit" disabled={user.cart.count <= 0 || paying}>{paying ? "Processing" : "Pay Now"}</Button>
+                    <Button className="mt-3" type="submit" disabled={user.cart.count <= 0 || paying || isSuccess}>{paying ? "Processing" : "Pay Now"}</Button>
 
                 </Form>
             </Col>
